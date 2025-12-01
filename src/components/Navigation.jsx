@@ -3,15 +3,15 @@ import './Navigation.css';
 
 function Navigation() {
   const location = useLocation();
-
-  const navItems = [
-    { path: '/', label: 'Главная', icon: '🏠' },
-    { path: '/technologies', label: 'Мои технологии', icon: '📚' },
-    { path: '/api-search', label: 'Поиск на GitHub', icon: '🌐' },
-    { path: '/add-technology', label: 'Добавить', icon: '➕' },
-    { path: '/statistics', label: 'Статистика', icon: '📊' },
-    { path: '/settings', label: 'Настройки', icon: '⚙️' },
-  ];
+  
+const navItems = [
+  { path: '/', label: 'Главная', icon: '🏠' },
+  { path: '/technologies', label: 'Мои технологии', icon: '📚' },
+  { path: '/api-search', label: 'Поиск на GitHub', icon: '🌐' },
+  { path: '/data-management', label: 'Управление данными', icon: '🗃️' }, // НОВОЕ
+  { path: '/statistics', label: 'Статистика', icon: '📊' },
+  { path: '/settings', label: 'Настройки', icon: '⚙️' },
+];
 
   return (
     <nav className="main-navigation">
