@@ -6,7 +6,8 @@ function Navigation() {
 
   const navItems = [
     { path: '/', label: 'Главная', icon: '🏠' },
-    { path: '/technologies', label: 'Все технологии', icon: '📚' },
+    { path: '/technologies', label: 'Мои технологии', icon: '📚' },
+    { path: '/api-search', label: 'Поиск на GitHub', icon: '🌐' },
     { path: '/add-technology', label: 'Добавить', icon: '➕' },
     { path: '/statistics', label: 'Статистика', icon: '📊' },
     { path: '/settings', label: 'Настройки', icon: '⚙️' },

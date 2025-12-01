@@ -3,6 +3,7 @@ import Navigation from './components/Navigation';
 import Home from './pages/Home';
 import TechnologyList from './pages/TechnologyList';
 import TechnologyDetail from './pages/TechnologyDetail';
+import ApiSearch from './pages/ApiSearch';
 import AddTechnologyForm from './components/AddTechnologyForm';
 import Statistics from './pages/Statistics';
 import Settings from './pages/Settings';
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/technologies" element={<TechnologyList />} />
           <Route path="/technology/:id" element={<TechnologyDetail />} />
+          <Route path="/api-search" element={<ApiSearch />} />
           <Route path="/add-technology" element={<AddTechnologyForm />} />
           <Route path="/statistics" element={<Statistics />} />
           <Route path="/settings" element={<Settings />} />
@@ -28,7 +30,7 @@ function App() {
       </main>
       
       <footer className="App-footer">
-        <p>Трекер изучения технологий • React Router v6 • Всего технологий: {technologies.length}</p>
+        <p>Трекер изучения технологий • React Router • GitHub API • Всего технологий: {technologies.length}</p>
       </footer>
     </div>
   );
