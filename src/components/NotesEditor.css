@@ -1,0 +1,163 @@
+.notes-viewer {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+  border: 1px solid #eaeaea;
+}
+
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.notes-header h4 {
+  margin: 0;
+  color: #444;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.edit-notes-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-notes-btn:hover {
+  background: #5a6fd8;
+  transform: translateY(-1px);
+}
+
+.notes-content {
+  background: white;
+  border-radius: 8px;
+  padding: 12px;
+  border-left: 3px solid #667eea;
+}
+
+.notes-content p {
+  margin: 0 0 10px 0;
+  color: #333;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.notes-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #666;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.char-count {
+  font-weight: 600;
+}
+
+.last-edited {
+  font-style: italic;
+}
+
+.empty-notes {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  font-style: italic;
+}
+
+/* Редактор */
+.notes-editor {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+  border: 2px solid #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.editor-header h4 {
+  margin: 0;
+  color: #444;
+  font-size: 1rem;
+}
+
+.editor-stats .char-count {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 12px;
+  background: #f0f0f0;
+}
+
+.editor-stats .char-count.warning {
+  background: #ffebee;
+  color: #f44336;
+}
+
+.notes-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.notes-textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.notes-textarea::placeholder {
+  color: #999;
+}
+
+.editor-hint {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 8px 0;
+  font-style: italic;
+  text-align: center;
+}
+
+.editor-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.editor-actions button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

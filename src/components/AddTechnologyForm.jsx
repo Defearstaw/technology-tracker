@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './AddTechnologyForm.css';
 
 function AddTechnologyForm({ onAddTechnology }) {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     title: '',
     description: '',
@@ -71,13 +73,14 @@ function AddTechnologyForm({ onAddTechnology }) {
     // Имитация задержки для UX
     setTimeout(() => {
       const newTechnology = {
-        id: Date.now(), // Временный ID
+        id: Date.now(),
         title: formData.title.trim(),
         description: formData.description.trim(),
         category: formData.category,
         difficulty: formData.difficulty,
         status: 'not-started',
-        createdAt: new Date().toISOString()
+        createdAt: new Date().toISOString(),
+        notes: ''
       };
 
       onAddTechnology(newTechnology);
@@ -92,6 +95,9 @@ function AddTechnologyForm({ onAddTechnology }) {
       
       setErrors({});
       setIsSubmitting(false);
+      
+      // Редирект на страницу списка
+      navigate('/technologies');
     }, 500);
   };
 
@@ -103,6 +109,7 @@ function AddTechnologyForm({ onAddTechnology }) {
       difficulty: 'beginner'
     });
     setErrors({});
+    navigate('/technologies');
   };
 
   return (
